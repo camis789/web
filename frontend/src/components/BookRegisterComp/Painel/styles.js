@@ -105,7 +105,7 @@ export const Page = styled.input`
   padding-top: 10px;
 `;
 
-export const Cat = styled.input`
+export const Code = styled.input`
   display:flex;
   flex-direction: column;
   margin-top: 10px;

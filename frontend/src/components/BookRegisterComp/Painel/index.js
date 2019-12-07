@@ -7,7 +7,7 @@ import {
     Autor,
     Editora,
     Page,
-    Cat,
+    Code,
     Locate,
     Caixa,
     Menu,
@@ -27,7 +27,7 @@ export default function RightPainel() {
   const[nome, setNome] = useState("");
   const[autor, setAutor] = useState("");
   const[page, setPage] = useState("");
-  const[category, setCategory] = useState("");
+  const[code, setCode] = useState("");
   const[location, setLocation] = useState("");
   const[editora, setEditora] = useState("");
 
@@ -36,7 +36,7 @@ export default function RightPainel() {
   }, [])
 
    async function submitForm(){
-    if(nome!= "" && editora !="" && autor !== "" && page !="" && category !="" && location !=""){
+    if(nome!= "" && editora !="" && autor !== "" && page !="" && code !="" && location !=""){
       try{
           var result = await api.post('api/book/add',
         {
@@ -44,7 +44,7 @@ export default function RightPainel() {
           Editora: editora,
           Autor: autor,
           Page: page,
-          Category: category,
+          code: code,
           Location: location
 
         });
@@ -80,7 +80,7 @@ export default function RightPainel() {
             <Text>Quantidade de Páginas</Text>
             <Page name="Page" placeholder="Ex: 88" value={page} onChange={e => setPage(e.target.value)}/>
             <Text>Gênero</Text>
-            <Cat name="Gen" placeholder="Ex: Romance" value={category} onChange={e => setCategory(e.target.value)} />
+            <Code name="Code" placeholder="Ex: Romance" value={code} onChange={e => setCode(e.target.value)} />
             <Text>Localização</Text>
             <Locate name="Location" placeholder="Ex: Prateleira Tal" value={location} onChange={e => setLocation(e.target.value)} />
             <a href="/bookregister"><BotaoCad>Cadastrar</BotaoCad></a>

@@ -48,16 +48,20 @@ export default function RightPainel() {
       }
   }
 
+
 return (
+    <>
   <div>
+
       { book != null &&
-          book.map((book, id) => 
-              <Container key={id}>
-                  <a onClick={() => clickEdit(book.id)}><Text>{book.name}</Text></a>  
+          book.map((book, nome) => 
+              <Container key={nome}>
+                  <a onClick={() => clickEdit(book.nome)}><Text>{book.nome}</Text></a>  
               </Container>
           )
       }
   </div>
+  </>
 );
 
 }

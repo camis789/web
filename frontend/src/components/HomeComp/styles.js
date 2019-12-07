@@ -22,7 +22,7 @@ export const Menu = styled.nav`
     margin-left:21.3%;
     width:800px;
     height: 50%;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 15px;
 
 
@@ -85,5 +85,6 @@ export const Textsenha = styled.p`
 
 export const Text = styled.p`
     margin-left: 15px;
+    color:#000;
     font-weight: bold;
 `;

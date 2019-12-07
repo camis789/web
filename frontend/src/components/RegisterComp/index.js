@@ -28,7 +28,7 @@ export default function RightPainel() {
   }, [email])
 
    async function submitForm(){
-    if(nome!= "" && email !="" && password !== ""){
+    if(nome!= "" && email !="" && password != ""){
       try{
           var result = await api.post('api/user/',
         {

@@ -25,7 +25,7 @@ export default function RightPainel() {
   }, [email])
 
   async function submitForm(){
-    if(email !=="" && password !== ""){
+    if(email !="" && password != ""){
       try{
         var result = await api.post('api/user/login',
         {
@@ -56,7 +56,7 @@ export default function RightPainel() {
     <Container>
       <CaixaDaAlegria>
         <User name="User_Diversao" placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
-        <Password name="Senha" placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)}/>
+        <Password type="password"name="Senha" placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)}/>
         <Textsenha>Esqueceu sua senha?</Textsenha> 
         <BotaoInscreva onClick={() => goToRegister()}>Registre-se</BotaoInscreva>
         <BotaoEntrar onClick={() => submitForm()}>Entrar</BotaoEntrar>
